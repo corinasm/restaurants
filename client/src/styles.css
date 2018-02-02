@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+button {
+    padding: 8px;
+    border:none;
+    border-radius: 3px;
+    color: #fff; 
+    font-weight: 500;
+    font-size: 15px;
+    vertical-align: center;
+    width: 150px;
+    height: 35px;
+    display: inline-block;
+    
+}
+.button_norm {
+    background-color: #52d1ff;
+}
+.button_del {
+    background-color: #ff7f50;
+}
+.button_edit {
+    background-color: #8052ff;
+}
+
+button.button_norm:hover, focus {
+    background: #0096cc;
+    outline: none;
+}
+button.button_del:hover, focus {
+    background: #ff571a;
+    outline: none;
+} 
+button.button_edit:hover, focus {
+    background: #571aff;
+    outline: none;
+}
+.error {
+    font-size: 14px;
+    color: #52d1ff;
+}     

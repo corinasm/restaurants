@@ -1,0 +1,28 @@
+<div id="reg_wrapper">
+	<h2>Register a new restaurant</h2>
+	 
+	<div class="center_form">
+
+			<div class="error" *ngIf="errors">  
+
+					<ul style="list-style-type:none">
+						<li>{{ errors.errors.rest_name.message }}</li>
+						<li>{{ errors.errors.cuisine.message }}</li>
+					</ul>
+			</div>		
+				
+      	<form (submit) = "createRestaurant()">
+			<p>Restaurant name:</p> 
+			<p><input type="text" class="form_field" name="newRestaurant.rest_name" [(ngModel)] = "newRestaurant.rest_name"/></p>
+			
+			<p>Cuisine:</p>
+			<p><input type="text" class="form_field" name="newRestaurant.cuisine" [(ngModel)] = "newRestaurant.cuisine"/></p>
+				
+				<button class = "button_norm" type="submit">Register</button> &nbsp;&nbsp;
+				<button class = "button_del" type="reset">Cancell</button>
+		</form>
+	</div>
+
+
+</div>	
+

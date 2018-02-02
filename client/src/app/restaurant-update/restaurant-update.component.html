@@ -1,0 +1,29 @@
+<div id="redit_wrapper">
+    <h2>Edit the restaurant</h2>
+     
+    <div class="center_form">
+  
+        <div class="error" *ngIf="errors">  
+
+            <ul style="list-style-type:none">
+              <li>{{ errors.errors.rest_name.message }}</li>
+              <li>{{ errors.errors.cuisine.message }}</li>
+			</ul>
+			
+        </div>		
+          
+        <form (submit) = "editRestaurant()">
+			<p>Restaurant name:</p> 
+			<p><input type="text" class="form_field" name="selectedRestaurant.rest_name" [(ngModel)] = "selectedRestaurant.rest_name"/></p>
+			
+			<p>Cuisine:</p>
+			<p><input type="text" class="form_field" name="selectedRestaurant.cuisine" [(ngModel)] = "selectedRestaurant.cuisine"/></p>
+			
+			<button class = "button_norm" type="submit">Edit</button> &nbsp;&nbsp;
+			<button class = "button_del" type="reset">Cancell</button>
+      	</form>
+    </div>
+  
+  
+  </div>	
+  

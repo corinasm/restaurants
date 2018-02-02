@@ -1,0 +1,27 @@
+
+<div id ="list_wrapper">
+
+	<button class="button_norm" type="button" [routerLink]="['/new']">New Restaurant</button>
+
+	<table>
+		<thead>
+			<tr>
+				<th class = "t_reg">Restaurant</th>
+				<th class = "t_reg">Cuisine</th>
+				<th class = "t_actions">Actions Available</th>
+			</tr>		
+		</thead>
+		<tbody>
+			<tr *ngFor="let r of restaurants">
+				<td> {{ r.rest_name }} </td>
+				<td> {{ r.cuisine }} </td>
+				<td> 
+					<button class="button_norm" type="button" [routerLink]="['/reviews/',r._id]">Read Reviews</button>&nbsp;&nbsp;&nbsp;&nbsp;
+					<button class="button_edit" type="button" [routerLink]="['/edit/',r._id]">Update</button>&nbsp;&nbsp;&nbsp;&nbsp;
+					<button class="button_del" type="button" (click)="deleteRestaurant(r._id)">Delete</button>
+					
+				</td>		
+			</tr>
+		</tbody>	
+	</table>
+</div>

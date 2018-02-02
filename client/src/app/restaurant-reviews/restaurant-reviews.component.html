@@ -1,0 +1,21 @@
+<div id ="list_wrapper">
+
+	<h2>Reviews for {{ reviewedRestaurant.rest_name }}</h2>
+
+    <button class="button_norm" type="button" [routerLink]="['/write',reviewedRestaurant._id]">New Reviews</button>&nbsp;&nbsp;&nbsp;&nbsp;
+	<button class="button_edit" type="button" [routerLink]="['/']">All Restaurants</button>
+	
+	<table>
+      	<tr>
+			<th class = "t_reg">Customer</th>
+			<th class = "t_reg">Stars</th>
+			<th class = "t_actions">Description</th>
+      	</tr>		
+        
+      	<tr *ngFor="let rev of reviews">
+			<td> {{ rev.user_name }} </td>
+			<td> {{ rev.stars }} </td>
+			<td> {{ rev.user_review }}</td>		
+      	</tr>
+    </table>
+</div>

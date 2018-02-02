@@ -1,0 +1,39 @@
+/* @import url(https://fonts.googleapis.com/css?family=Lato)
+@import url(https://fonts.googleapis.com/css?family=Oswald) */
+
+#wrapper {
+    font-family: 'Lato';
+    color: #404040;
+    padding: 15px;
+    width: 70%;
+    margin: 0px auto;
+}
+#space {
+    height: 30px;
+}
+h1 {
+    font-family: 'Oswald';
+    text-align: center;
+    color: #ff7f50;
+    font-size: 42px;
+    text-shadow: 3px 3px 3px #ffb499;
+}
+
+
+
+/* 
+a:visited {
+    color: green;
+}
+
+ mouse over link 
+a:hover {
+    color: red;
+}
+
+ selected link 
+a:active {
+    color: yellow;
+}
+*/
+

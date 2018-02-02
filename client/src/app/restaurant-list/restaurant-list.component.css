@@ -1,0 +1,35 @@
+list-wrapper {
+    padding: 50px 0px;
+    font-size: 14px;
+    
+}
+
+table, th, td  {
+    border:1px solid #b3b3b3;
+    border-collapse: collapse;
+    padding: 10px 15px; 
+    
+}
+table {
+    margin: 20px 0px;
+ 
+
+}
+th {
+    text-align: center;
+    height: 30px;
+    background-color: #cccccc;
+    font-weight: 500;
+}
+td {
+    text-align: left;
+    height: 30px;
+}
+
+.t_reg {
+    width: 180px; 
+}
+.t_actions {
+    width: 500px;
+}
+

@@ -1,0 +1,37 @@
+<div id="wrev_wrapper">
+    <h2>Write a review for {{ reviewedRestaurant.rest_name }}</h2>
+     
+    <div class="center_form">
+  
+        <div class="error" *ngIf="errors">  
+  
+            <ul>
+              <li>{{ errors.errors.reviews.user_name }} </li>
+              <li>{{ errors.errors.reviews.user_review }}</li>
+            </ul> 
+		
+		</div>		
+		  
+		{{ newReview | json}}
+        <form (submit) = "writeReview()">
+        	<p>Your name:</p> 
+			<p><input type="text" class="form_field" name="newReview.user_name" [(ngModel)] = "newReview.user_name"/></p>
+			<p>
+			<select class="form_field" name="newReview.stars" [(ngModel)]="newReview.stars" >
+				<option value="1"> 1 star</option>
+				<option value="2">2 stars</option>
+				<option value="3">3 stars</option>
+				<option value="4">4 stars</option>
+				<option value="5">5 stars</option>
+			</select>
+			</p>
+        
+        	<p>Description:</p>
+        	<p><textarea class="form_field" name="newReview.user_review" [(ngModel)] = "newReview.user_review"></textarea></p>
+          
+          	<button class = "button_norm" type="submit">Submit</button> &nbsp;&nbsp;
+          	<button class = "button_del" type="reset">Cancell</button>
+      	</form>
+    </div>
+</div>	
+  
